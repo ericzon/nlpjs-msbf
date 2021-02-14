@@ -3,6 +3,24 @@
   "locale": "en-US",
   "data": [
     {
+      "intent": "axa.test",
+      "utterances": [
+        "axa"
+      ],
+      "answers": [
+        "/axaTest"
+      ]
+    },
+    {
+      "intent": "axa.card-suggestion-test",
+      "utterances": [
+        "axa suggestions"
+      ],
+      "answers": [
+        "/axaSuggestionsTest"
+      ]
+    },
+    {
       "intent": "agent.whereami",
       "utterances": [
         "where am i",

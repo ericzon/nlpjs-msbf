@@ -1,0 +1,15 @@
+
+dialog main
+  nlp
+
+dialog axaTest
+  say this is a test
+  say Please, tell me your age
+  ask age
+  say your age is {{age}}
+
+dialog axaSuggestionsTest
+  suggest A|B|C
+  say Example showing suggestions
+  ask option
+  say You said {{option}}
