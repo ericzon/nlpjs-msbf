@@ -3,7 +3,6 @@ const { dockStart } = require('@nlpjs/basic');
 
 const port = process.env.PORT || 3000;
 const basicScriptPath = path.join(__dirname, 'flows', 'script.dlg');
-console.log('basicScriptPath ', basicScriptPath);
 const conf = {
   "settings": {
     "nlp": {
@@ -28,6 +27,7 @@ const conf = {
 (async () => {
   console.log('msbf starting on port ', port);
   if (process.env.DEBUG_ENABLED === 'true') {
+    console.log('basicScriptPath ', basicScriptPath);
     console.log('MSBF_BOT_APP_ID: ', process.env.MSBF_BOT_APP_ID);
     console.log('MSBF_BOT_APP_PASSWORD: ', process.env.MSBF_BOT_APP_PASSWORD);
   }

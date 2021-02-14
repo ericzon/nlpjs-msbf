@@ -8,6 +8,7 @@ Env vars:
 ```
  MSBF_BOT_APP_ID=<token>
  MSBF_BOT_APP_PASSWORD=<token>
+ MSBF_BOT_APP_SECRET=<token>
  DEBUG_ENABLED=<boolean>
  PORT=<number>
 ```
