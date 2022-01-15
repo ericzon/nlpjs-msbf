@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --silent tests/*.spec.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,11 @@
     "@nlpjs/lang-es": "^4.19.1",
     "@nlpjs/msbf-connector": "^4.21.0",
     "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["./tests/setupJest.js"]
   }
 }

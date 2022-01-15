@@ -21,10 +21,10 @@ const conf = {
     }
   },
   "bot": {},
-  "use": ["Basic", "LangEs", "ConsoleConnector", "ExpressApiServer", "MsbfConnector", "Bot"]
+  "use": ["Basic", "LangEs", "ExpressApiServer", "MsbfConnector", "Bot"]
 };
 
-(async () => {
+async function bootstrapApp() {
   console.log('msbf starting on port ', port);
   if (process.env.DEBUG_ENABLED === 'true') {
     console.log('basicScriptPath ', basicScriptPath);
@@ -34,7 +34,16 @@ const conf = {
   const dock = await dockStart(conf);
   const bot = dock.get('bot');
   if (bot) {
-    bot.loadScript(basicScriptPath);
+    await bot.loadScript(basicScriptPath);
   }
+
+  return bot;
+}
+
+(async () => {
+  await bootstrapApp();
 })();
 
+module.exports = {
+  bootstrapApp
+}

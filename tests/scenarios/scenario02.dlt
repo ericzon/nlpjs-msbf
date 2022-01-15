@@ -1,0 +1,8 @@
+user> hello
+bot> Greetings!|Hey there!
+user> axa suggestions
+bot> Example showing suggestions
+user> B
+bot> You said B
+user> bye
+bot> Till next time|see you soon!
