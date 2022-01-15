@@ -7,8 +7,8 @@ const conf = {
   "settings": {
     "nlp": {
       "corpora": [
-        "./corpus-en.json",
-        "./corpus-es.json"
+        "./corpus/corpus-en.json",
+        "./corpus/corpus-es.json"
       ]
     },
     "console": {
