@@ -25,7 +25,8 @@ describe('Bot tests', () => {
       test(testCase, async () => {
          const connector = new TestConnector({ container: bot.container });
          await connector.runScript(path.join(__dirname, 'scenarios', testCase));
-
+         
+         expect(connector.messages.length).toBe(connector.expected.length);
          connector.expected.forEach((expectedRule, idx) => {
             const expectedTexts = adaptRule(expectedRule);
             const textReceived = connector.messages[idx];
