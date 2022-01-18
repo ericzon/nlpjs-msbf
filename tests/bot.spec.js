@@ -3,15 +3,7 @@ const { TestConnector } = require('@nlpjs/bot');
 const { dock } = require('@nlpjs/basic');
 
 const { bootstrapApp } = require('../index');
-
-const adaptRule = (originalRule) => {
-   const SEPARATOR_TOKEN = '|';
-   const BOT_START = 'bot> ';
-   return originalRule.includes(SEPARATOR_TOKEN) ? originalRule.split(SEPARATOR_TOKEN).map(rule => {
-      rule = rule.includes(BOT_START) ? rule : BOT_START + rule;
-      return rule;
-   }) : [originalRule];
-}
+const { adaptRule } = require('./helpers');
 
 describe('Bot tests', () => {
    let bot;
@@ -37,6 +29,7 @@ describe('Bot tests', () => {
 
    afterAll(() => {
       const serverContainer = dock.get('api-server');
+      console.log('serverContainer.server -> ', serverContainer.server)
       serverContainer.server.close();
    });
 });

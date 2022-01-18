@@ -5,7 +5,7 @@
     {
       "intent": "axa.test",
       "utterances": [
-        "axa"
+        "axa test"
       ],
       "answers": [
         "/axaTest"
