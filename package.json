@@ -11,12 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nlpjs/basic": "^4.21.0",
-    "@nlpjs/bot": "^4.22.10",
+    "@nlpjs/basic": "^4.22.17",
+    "@nlpjs/bot": "^4.22.13",
     "@nlpjs/express-api-server": "^4.21.0",
     "@nlpjs/lang-es": "^4.19.1",
-    "@nlpjs/msbf-connector": "^4.21.0",
-    "dotenv": "^8.2.0"
+    "@nlpjs/msbf-connector": "^4.22.16",
+    "dotenv": "^8.2.0",
+    "got-cjs": "^12.0.1"
   },
   "devDependencies": {
     "jest": "^27.4.7"
